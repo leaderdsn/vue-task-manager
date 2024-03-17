@@ -1,0 +1,16 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": ["eslint:recommended", "plugin:vue/vue3-recommended", "prettier"],
+  "rules": {
+    "no-var": "error",
+    "semi": ["error", "never"],
+    "indent": ["error", 2],
+    "no-multi-spaces": "error",
+    "space-in-parens": "error",
+    "no-multiple-empty-lines": "error",
+    "prefer-const": "error",
+    "no-use-before-define": "error"
+  }
+}
