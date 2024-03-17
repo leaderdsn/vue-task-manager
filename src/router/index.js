@@ -1,9 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { defineAsyncComponent } from 'vue'
 
-const AppNotFound = defineAsyncComponent(
-  () => import('@/pages/AppNotFound.vue'),
-)
+const AppNotFound = () => import('@/pages/AppNotFound.vue')
 
 const catchRoutes = [
   {
@@ -14,15 +11,18 @@ const catchRoutes = [
 
 const mainRoutes = [
   {
-    path: '/',
+    path: '/home',
     name: 'Главная страница',
-    alias: '/home',
     component: () => import('@/pages/AppHome.vue'),
   },
   {
     path: '/tasks',
     name: 'Задачи',
     component: () => import('@/pages/AppTasks.vue'),
+  },
+  {
+    path: '/',
+    redirect: '/home',
   },
 ]
 
